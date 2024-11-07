@@ -1,0 +1,21 @@
+kind: test
+apiVersion: api.webmethods.io/v1
+metadata:
+  name: Hello
+  version: 1.2.3
+  tags:
+    - ASD
+  namespace: dev
+spec:
+  api:
+    $ref: dev:PaymentAPI:1.0
+request:
+  - method: GET
+    resource: /untitled
+    headers:
+      - key: Content-Type
+        value: application/json
+    auth:
+      noauth: true
+    assertions:
+      $ref: ""

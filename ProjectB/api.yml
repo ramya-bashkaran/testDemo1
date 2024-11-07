@@ -1,0 +1,17 @@
+kind: api
+apiVersion: api.webmethods.io/v1
+metadata:
+  name: PaymentAPI 
+  namespace: dev 
+  version: "1.0"
+  tags: 
+    - swagger
+    - sample
+  type: REST
+spec: 
+  mocked: true
+  api-spec:
+    #$path: petstore.yaml 
+    $path: swagger.json
+  policy-sequence:
+    - $ref: dev:dev_policies:1.0
